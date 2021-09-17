@@ -7,9 +7,10 @@ pageBanner(array(
 ));
  ?>
 
-<div class="container container--narrow page-section">
 
-<div class="acf-map">
+<div class="container mx-auto mt-4 bg-green-100 text-black p-8 r">
+
+
 
 <?php
   while(have_posts()) {
@@ -18,7 +19,7 @@ pageBanner(array(
    ?>
     <div class="marker" data-lat="<?php echo $mapLocation['lat'] ?>" data-lng="<?php echo $mapLocation['lng']; ?>">
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-      <?php echo $mapLocation['address']; ?>
+      <!-- <?php echo $mapLocation['address']; ?> -->
     </div>
   <?php } ?>
 </div>
