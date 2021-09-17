@@ -1,0 +1,67 @@
+/*
+ Theme Name: UDEMY DEV 
+ Author: Udemy Course - modified
+ Version: 0.0
+*/
+html {
+	margin-left: calc(100vw - 100%);
+	margin-right: 0;
+}
+
+@media screen and (min-width: 960px) {
+	html {
+		margin-left: calc(100vw - 100%);
+		margin-right: 0;
+	}
+}
+body {
+	color: #676667;
+	font-size: 20px;
+	line-height: 1.4;
+	font-family: 'Raleway', sans-serif;
+}
+nav a,
+a:active,
+a:focus {
+	color: purple;
+}
+nav a:hover {
+	color: orange;
+}
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+.main-page {
+	background: #f0f0f0;
+	padding: 20px;
+	min-height: 300px;
+}
+.breadcrumbs {
+	background: orange;
+	color: white;
+}
+.template {
+	border: 1px solid green;
+	width: 200px;
+	padding: 10px 20px;
+}
+.current-menu-item {
+	font-weight: bold;
+}
+
+/* Pagination styles */
+
+.page-numbers {
+	color: purple;
+	font-weight: bold;
+}
+.current {
+	color: orange;
+	font-weight: bold;
+}
+.next,
+.prev {
+	color: purple;
+	font-weight: bold;
+}
