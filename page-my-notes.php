@@ -14,7 +14,8 @@
     
     
 
-    <div class="container container--narrow page-section">
+    <div class="container mx-auto  bg-green-100 text-black p-8 ">
+
       
       <div class="create-note">
         <h2 class="headline headline--medium">Create New Note</h2>

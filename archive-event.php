@@ -4,7 +4,8 @@ get_header();
 
  ?>
 
-<div class="container mx-auto bg-gray-100">
+<div class="container mx-auto  bg-green-100 text-black p-8 ">
+
 <?php
   
   while(have_posts()) {

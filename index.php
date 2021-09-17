@@ -3,7 +3,8 @@
 get_header();
 
  ?>
-<div class="container mx-auto bg-pink-200 p-4">
+<div class="container mx-auto  bg-pink-300 text-black p-8 ">
+
 <?php
   while(have_posts()) {
     the_post(); ?>

@@ -8,7 +8,7 @@ pageBanner(array(
  ?>
 
 
-<div class="container mx-auto mt-4 bg-green-100 text-black p-8 r">
+<div class="container mx-auto  bg-red-100 text-black p-8 ">
 
 
 

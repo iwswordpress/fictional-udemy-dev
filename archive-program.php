@@ -3,7 +3,8 @@
 get_header();
  ?>
 
-<div class="container mx-auto mt-4 bg-yellow-100 text-black p-8 r">
+<div class="container mx-auto  bg-pink-100 text-black p-8 ">
+
 
 <ul class="ml-4 text-left">
 
