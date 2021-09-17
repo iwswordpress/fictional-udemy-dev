@@ -4,7 +4,7 @@ class Job {
 		if (document.querySelector('#job')) {
 			this.job = document.querySelector('#job');
 			this.jobBtn = document.querySelector('.job-class');
-			console.log('Job Btn', this.jobBtn.a('id'));
+			console.log('Job Btn', this.jobBtn);
 			this.events();
 		}
 	}

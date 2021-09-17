@@ -5,6 +5,7 @@
   while(have_posts()) {
     the_post();
     $job_id = get_the_ID();
+    echo $job_id
     ?>
    
     <div class="container mx-auto  bg-pink-100 text-black p-8 ">
