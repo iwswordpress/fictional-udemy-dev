@@ -14,7 +14,7 @@ class Job {
 	}
 
 	clickHandler(e) {
-		console.log('clickHandler', e);
+		console.log('clickHandler - jobid =', e.target.getAttribute('jobid'));
 	}
 }
 
