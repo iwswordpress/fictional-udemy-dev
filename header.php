@@ -10,7 +10,7 @@
     <header >
     <div class="container mx-auto mt-4 bg-gray-600 text-white" >
       <h1 class=""><a href="<?php echo site_url() ?>"><strong>Fictional</strong> University</a></h1>
-      <a href="<?php echo esc_url(site_url('/search')); ?>" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
+     
       <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
       <div class="site-header__menu group">
         <nav class="">
@@ -29,10 +29,10 @@
               </a>
             <?php } else { ?>
               <a href="<?php echo wp_login_url(); ?>" class="">Login</a>
-              <a href="<?php echo wp_registration_url(); ?>" class="">Sign Up</a>
+              <a href="<?php echo wp_registration_url(); ?>" class="">Sign Up</a> 
              <?php } ?>
           
-          <a href="<?php echo esc_url(site_url('/search')); ?>" class=""><i class="fa fa-search" aria-hidden="true"></i></a>
+        
           </ul>
         </nav>
      

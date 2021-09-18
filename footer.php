@@ -6,7 +6,7 @@
           <a href="<?php echo site_url('/our-history')?>">History</a>
       </div>
     </footer>
-<!--  -->
+
 <?php wp_footer(); ?>
 </body>
 </html>
