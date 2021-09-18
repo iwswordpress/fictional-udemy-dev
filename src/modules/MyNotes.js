@@ -2,6 +2,7 @@ import axios from 'axios';
 
 class MyNotes {
 	constructor() {
+		console.log('%cMyNotes.js constructor...', 'color:purple;font-size:18px');
 		if (document.querySelector('#my-notes')) {
 			axios.defaults.headers.common['X-WP-Nonce'] = universityData.nonce;
 			this.myNotes = document.querySelector('#my-notes');
