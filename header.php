@@ -20,7 +20,12 @@
             <li <?php if (get_post_type() == 'program') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('program') ?>">Programs</a></li>
             <li <?php if (get_post_type() == 'event' OR is_page('past-events')) echo 'class="current-menu-item"';  ?>><a href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li>
              <li <?php if (get_post_type() == 'job' OR is_page('past-jobs')) echo 'class="current-menu-item"';  ?>><a href="<?php echo get_post_type_archive_link('job'); ?>">Jobs</a></li>
+            
+             <li <?php if (get_post_type() == 'professor' ) echo 'class="current-menu-item"';  ?>><a href="<?php echo get_post_type_archive_link('professor'); ?>">Professors</a></li>
+           
             <li <?php if (get_post_type() == 'campus') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('campus'); ?>">Campuses</a></li>
+         
+          
             <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog'); ?>">Blog</a></li>
             <?php if(is_user_logged_in()) { ?>
               <a href="<?php echo esc_url(site_url('/my-notes')); ?>" class="">My Notes</a>
