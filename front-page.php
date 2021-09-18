@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-  <div class="container mx-auto mt-4 bg-gray-200">
+  <div class="container mx-auto mt-4 bg-gray-200 p-2">
 
         <div class="full-width-split__inner">
-        
+          <h2 class="font-bold text-4xl mb-4 text-center">HOME</h2>
           <h2 class="font-bold text-2xl">Upcoming Events</h2>
 
           <?php 
@@ -35,7 +35,7 @@
         </div>
       </div>
     
-        <div class="container mx-auto mt-4 bg-gray-200">
+        <div class="container mx-auto mt-4 bg-gray-200 p-2">
           <h2 class="font-bold text-2xl">From Our Blogs</h2>
           <?php
             $homepagePosts = new WP_Query(array(
@@ -44,7 +44,7 @@
 
             while ($homepagePosts->have_posts()) {
               $homepagePosts->the_post(); ?>
-              <div class="border-2 border-red-300 p-2 mt-2">
+              <div class="border-2 border-purple-600 p-2 mt-2 rounded">
                 <a class="event-summary__date event-summary__date--beige t-center" href="<?php the_permalink(); ?>">
                   <span class="event-summary__month"><?php the_time('M'); ?></span>
                   <span class="event-summary__day"><?php the_time('d'); ?></span>  

@@ -1,4 +1,4 @@
-<div class="border-2 border-red-300 p-2 mt-2 rounded">
+<div class="border-2 border-purple-600 p-2 mt-2 rounded">
   <a class=""><?php
       $eventDate = new DateTime(get_field('event_date'));
       echo $eventDate->format('M')

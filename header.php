@@ -9,12 +9,13 @@
 	line-height: 1.4;	font-family: 'Raleway', sans-serif;">
     <header >
     <div class="container mx-auto mt-4 bg-gray-600 text-white" >
-      <h1 class=""><a href="<?php echo site_url() ?>"><strong>Fictional</strong> University</a></h1>
+      <h1 class=""><a href="<?php echo site_url() ?>"><strong>FINALUNIV</strong> ficitonal-udemy-dev</a></h1>
      
       <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
       <div class="site-header__menu group">
         <nav class="">
           <ul style="display:flex; justify-content: space-around; align-items: center">
+           <li <?php if (is_page('/')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/') ?>">Home</a></li>
             <li <?php if (is_page('about-us') or wp_get_post_parent_id(0) == 16) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about-us') ?>">About Us</a></li>
             <li <?php if (get_post_type() == 'program') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('program') ?>">Programs</a></li>
             <li <?php if (get_post_type() == 'event' OR is_page('past-events')) echo 'class="current-menu-item"';  ?>><a href="<?php echo get_post_type_archive_link('event'); ?>">Events</a></li>
