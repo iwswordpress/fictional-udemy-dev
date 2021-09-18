@@ -22,7 +22,8 @@
              <li <?php if (get_post_type() == 'job' OR is_page('past-jobs')) echo 'class="current-menu-item"';  ?>><a href="<?php echo get_post_type_archive_link('job'); ?>">Jobs</a></li>
             
              <li <?php if (get_post_type() == 'professor' ) echo 'class="current-menu-item"';  ?>><a href="<?php echo get_post_type_archive_link('professor'); ?>">Professors</a></li>
-           
+
+          
             <li <?php if (get_post_type() == 'campus') echo 'class="current-menu-item"' ?>><a href="<?php echo get_post_type_archive_link('campus'); ?>">Campuses</a></li>
          
           

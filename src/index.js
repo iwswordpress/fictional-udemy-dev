@@ -6,16 +6,15 @@ import MobileMenu from './modules/MobileMenu';
 // import GoogleMap from './modules/GoogleMap';
 import Search from './modules/Search';
 import MyNotes from './modules/MyNotes';
-import Like from './modules/Like';
+// import Like from './modules/Like';
 import Job from './modules/Job';
 
-
-console.log('%cIndex.js firing...','color:blue;font-size:18px')
+console.log('%cIndex.js firing...', 'color:blue;font-size:18px');
 // Instantiate a new object using our modules/classes
 const mobileMenu = new MobileMenu();
 // const heroSlider = new HeroSlider();
 // const googleMap = new GoogleMap();
 // const search = new Search();
 const myNotes = new MyNotes();
-const like = new Like();
+// const like = new Like();
 const job = new Job();

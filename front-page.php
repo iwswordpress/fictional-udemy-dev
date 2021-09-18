@@ -62,7 +62,7 @@
           ?> 
 
           
-          
+            <?php echo get_post_type_archive_link('professor');?>
           
           <p class=""><a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>
         </div>
