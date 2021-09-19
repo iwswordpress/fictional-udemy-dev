@@ -45,7 +45,7 @@
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'campus') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('campus'); ?>">Campuses</a>
 				</li>
         <li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo esc_url(site_url('/my-notes')); ?>">My Notes</a>
+					<a class="inline-block py-2 px-4 text-white no-underline <?php if (is_page('my-notes')) echo 'text-blue-500' ?>" href="<?php echo esc_url(site_url('/my-notes')); ?>">My Notes</a>
 				</li>
 				<li class="mr-3">
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'post') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('post'); ?>">Blog</a>
