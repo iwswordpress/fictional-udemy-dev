@@ -64,7 +64,7 @@
 						<a class="inline-block py-2 px-4 text-white no-underline <?php if (is_page('my-notes')) echo 'text-blue-500' ?>" href="<?php echo esc_url(site_url('/my-notes')); ?>">My Notes</a>
 						</li>
 						<li class="mr-3">
-							<a class="inline-block text-yellow-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">LOG OUT</a>
+							<a class="inline-block text-yellow-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="<?php echo wp_logout_url( get_permalink() ); ?>">LOG OUT</a>
 						</li> 
 					<?php
         }
