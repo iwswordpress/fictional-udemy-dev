@@ -24,10 +24,10 @@
 		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 " id="nav-content">
 			<ul class="list-reset lg:flex justify-end flex-1 items-center">
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Home</a>
+					<a class="inline-block py-2 px-4 text-white no-underline <?php if (is_page('/')) echo 'text-blue-500' ?>"" href="<?php echo site_url('/') ?>">Home</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">About Us</a>
+					<a class="inline-block py-2 px-4 text-white no-underline  <?php if (is_page('about-us')) echo 'text-blue-500' ?>" href="<?php echo site_url('/about-us') ?>">About Us</a>
 				</li>
 				<li class="mr-3">
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'program') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('program') ?>">Programs</a>
