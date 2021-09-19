@@ -124,36 +124,26 @@ class MyNotes {
 				document.querySelector('.new-note-body').value = '';
 				document.querySelector('#my-notes').insertAdjacentHTML(
 					'afterbegin',
-					` <li data-id="${response.data.id}" class="fade-in-calc">
-            <input readonly class="note-title-field" value="${response.data.title.raw}">
-            <span class="edit-note"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
-            <span class="delete-note"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
-            <textarea readonly class="note-body-field">${response.data.content.raw}</textarea>
-            <span class="update-note btn btn--blue btn--small"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
-          </li>`,
+					` 
+					  <li data-id="${response.data.id}">
+                  <div class="a-note border-2 border-purple-500 p-2 mb-1 mt-1 max-w-lg">
+                    <div class="input-fields ">
+                      <div class="mt-2">
+                         <input readonly class="note-title-field" value="${response.data.title.raw}">
+                      </div>
+                      <div class=" mt-2">
+                       <textarea readonly class="note-body-field">${response.data.content.raw}</textarea>
+                      </div>
+
+                    </div><!-- input-fields --><br>
+                    <div class="buttons mb-2 w-auto">
+                      <span class="update-note bg-green-500 p-2  text-white cursor-pointer"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
+                        <span class="edit-note bg-pink-500 p-2 text-white cursor-pointer"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
+                      <span class="delete-note bg-red-500  p-2 text-white cursor-pointer"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
+                    </div><!--  buttons -->
+                  </div><!--  notes-list-output -->
+                </li>`,
 				);
-
-				// notice in the above HTML for the new <li> I gave it a class of fade-in-calc which will make it invisible temporarily so we can count its natural height
-
-				let finalHeight; // browser needs a specific height to transition to, you can't transition to 'auto' height
-				let newlyCreated = document.querySelector('#my-notes li');
-
-				// give the browser 30 milliseconds to have the invisible element added to the DOM before moving on
-				setTimeout(function () {
-					finalHeight = `${newlyCreated.offsetHeight}px`;
-					newlyCreated.style.height = '0px';
-				}, 30);
-
-				// give the browser another 20 milliseconds to count the height of the invisible element before moving on
-				setTimeout(function () {
-					newlyCreated.classList.remove('fade-in-calc');
-					newlyCreated.style.height = finalHeight;
-				}, 50);
-
-				// wait the duration of the CSS transition before removing the hardcoded calculated height from the element so that our design is responsive once again
-				setTimeout(function () {
-					newlyCreated.style.removeProperty('height');
-				}, 450);
 			} else {
 				document.querySelector('.note-limit-message').classList.add('active');
 			}
