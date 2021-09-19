@@ -31,14 +31,33 @@
 		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0 " id="nav-content">
 			<ul class="list-reset lg:flex justify-end flex-1 items-center">
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Active</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Home</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">About Us</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">link</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Programs</a>
 				</li>
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Events</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Jobs</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Professors</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Campuses</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Blog</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline" href="#">My Notes</a>
+				</li>
+			
         <?php if (!is_user_logged_in()) { ?>
           <li class="mr-3">
             <a class="inline-block text-yellow-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="#">LOGGED IN</a>
@@ -54,7 +73,7 @@
 			</ul>
 		</div>
 	</nav>
-<div class="mb-12" style="height:20px"></div
+<div class="mb-12" style="height:20px"></div>
 	<script>
 		//Javascript to toggle the menu
 		document.getElementById('nav-toggle').onclick = function(){
