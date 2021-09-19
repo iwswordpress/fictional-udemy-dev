@@ -30,26 +30,27 @@
 					<a class="inline-block py-2 px-4 text-white no-underline" href="#">About Us</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Programs</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('program') ?>">Programs</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Events</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('event') ?>">Events</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Jobs</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('job') ?>">Jobs</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Professors</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('professor'); ?>">Professors</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Campuses</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('campus'); ?>">Campuses</a>
+				</li>
+        <li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo esc_url(site_url('/my-notes')); ?>">My Notes</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">Blog</a>
+					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('post'); ?>">Blog</a>
 				</li>
-				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="#">My Notes</a>
-				</li>
+		
 			
         <?php if (!is_user_logged_in()) { ?>
           <li class="mr-3">
