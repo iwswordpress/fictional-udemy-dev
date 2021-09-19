@@ -16,6 +16,7 @@ class MyNotes {
 	}
 
 	clickHandler(e) {
+		console.log('clickHandler e', e.target);
 		if (e.target.classList.contains('delete-note') || e.target.classList.contains('fa-trash-o')) this.deleteNote(e);
 		if (
 			e.target.classList.contains('edit-note') ||
@@ -28,6 +29,7 @@ class MyNotes {
 	}
 
 	findNearestParentLi(el) {
+		console.log('findNearestParentLi(el)', el);
 		let thisNote = el;
 		while (thisNote.tagName != 'LI') {
 			thisNote = thisNote.parentElement;
@@ -37,6 +39,8 @@ class MyNotes {
 
 	// Methods will go here
 	editNote(e) {
+		console.log('editNote e', e.target);
+
 		const thisNote = this.findNearestParentLi(e.target);
 
 		if (thisNote.getAttribute('data-state') == 'editable') {
@@ -47,6 +51,8 @@ class MyNotes {
 	}
 
 	makeNoteEditable(thisNote) {
+		console.log('makeNoteEditable ', thisNote);
+
 		thisNote.querySelector('.edit-note').innerHTML = '<i class="fa fa-times" aria-hidden="true"></i> Cancel';
 		thisNote.querySelector('.note-title-field').removeAttribute('readonly');
 		thisNote.querySelector('.note-body-field').removeAttribute('readonly');
@@ -57,6 +63,7 @@ class MyNotes {
 	}
 
 	makeNoteReadOnly(thisNote) {
+		console.log('makeNoteReadOnly ', thisNote);
 		thisNote.querySelector('.edit-note').innerHTML = '<i class="fa fa-pencil" aria-hidden="true"></i> Edit';
 		thisNote.querySelector('.note-title-field').setAttribute('readonly', 'true');
 		thisNote.querySelector('.note-body-field').setAttribute('readonly', 'true');
@@ -67,6 +74,8 @@ class MyNotes {
 	}
 
 	async deleteNote(e) {
+		console.log('%cdelete note...', 'color:red;font-size:18px');
+		console.log(e.target);
 		const thisNote = this.findNearestParentLi(e.target);
 
 		try {
@@ -74,13 +83,8 @@ class MyNotes {
 				universityData.root_url + '/wp-json/wp/v2/note/' + thisNote.getAttribute('data-id'),
 			);
 			console.log('Delete Note', response);
-			thisNote.style.height = `${thisNote.offsetHeight}px`;
-			setTimeout(function () {
-				thisNote.classList.add('fade-out');
-			}, 20);
-			setTimeout(function () {
-				thisNote.remove();
-			}, 401);
+
+			thisNote.remove();
 			if (response.data.userNoteCount < 5) {
 				document.querySelector('.note-limit-message').classList.remove('active');
 			}
@@ -90,6 +94,8 @@ class MyNotes {
 	}
 
 	async updateNote(e) {
+		console.log('%cupdateNote', 'color:purple;font-size:18px');
+		console.log('updateNote ', e.target);
 		const thisNote = this.findNearestParentLi(e.target);
 
 		var ourUpdatedPost = {
@@ -110,6 +116,8 @@ class MyNotes {
 	}
 
 	async createNote() {
+		console.log('%ccreateNote', 'color:green;font-size:18px');
+
 		var ourNewPost = {
 			title: document.querySelector('.new-note-title').value,
 			content: document.querySelector('.new-note-body').value,
@@ -126,24 +134,24 @@ class MyNotes {
 					'afterbegin',
 					` 
 					  <li data-id="${response.data.id}">
-                  <div class="a-note border-2 border-purple-500 p-2 mb-1 mt-1 max-w-lg">
-                    <div class="input-fields ">
-                      <div class="mt-2">
-                         <input readonly class="note-title-field" value="${response.data.title.raw}">
-                      </div>
-                      <div class=" mt-2">
-                       <textarea readonly class="note-body-field">${response.data.content.raw}</textarea>
-                      </div>
+							<div class="a-note border-2 border-purple-500 p-2 mb-1 mt-1 max-w-lg">
+								<div class="input-fields ">
+									<div class="mt-2">
+											<input readonly class="note-title-field" value="${response.data.title.raw}">
+									</div>
+									<div class=" mt-2">
+										<textarea readonly class="note-body-field">${response.data.content.raw}</textarea>
+									</div>
 
-                    </div><!-- input-fields --><br>
-                    <div class="buttons mb-2 w-auto">
-                      <span class="update-note bg-green-500 p-2  text-white cursor-pointer"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
-                        <span class="edit-note bg-pink-500 p-2 text-white cursor-pointer"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
-                      <span class="delete-note bg-red-500  p-2 text-white cursor-pointer"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
-                    </div><!--  buttons -->
-                  </div><!--  notes-list-output -->
-                </li>`,
-q				);
+								</div><!-- input-fields --><br>
+								<div class="buttons mb-2 w-auto">
+									<span class="update-note bg-green-500 p-2  text-white cursor-pointer"><i class="fa fa-arrow-right" aria-hidden="true"></i> Save</span>
+										<span class="edit-note bg-pink-500 p-2 text-white cursor-pointer"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span>
+									<span class="delete-note bg-red-500  p-2 text-white cursor-pointer"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</span>
+								</div><!--  buttons -->
+							</div><!--  notes-list-output -->
+						</li>`,
+				);
 			} else {
 				document.querySelector('.note-limit-message').classList.add('active');
 			}
