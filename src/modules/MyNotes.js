@@ -143,7 +143,7 @@ class MyNotes {
                     </div><!--  buttons -->
                   </div><!--  notes-list-output -->
                 </li>`,
-				);
+q				);
 			} else {
 				document.querySelector('.note-limit-message').classList.add('active');
 			}
