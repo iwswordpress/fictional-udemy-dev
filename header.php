@@ -30,7 +30,7 @@
 					<a class="inline-block py-2 px-4 text-white no-underline" href="#">About Us</a>
 				</li>
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('program') ?>">Programs</a>
+					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'program') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('program') ?>">Programs</a>
 				</li>
 				<li class="mr-3">
 					<a class="inline-block py-2 px-4 text-white no-underline" href="<?php echo get_post_type_archive_link('event') ?>">Events</a>
