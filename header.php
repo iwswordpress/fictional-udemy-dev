@@ -42,9 +42,11 @@
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'job') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('job') ?>">Jobs</a>
 				</li>
 			
-			
 				<li class="mr-3">
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if  (is_page('rxjs'))  echo 'text-blue-500' ?>" href="<?php echo site_url('/rxjs') ?>">Rxjs</a>
+				</li>
+				<li class="mr-3">
+					<a class="inline-block py-2 px-4 text-white no-underline <?php if  (is_page('reactjs'))  echo 'text-blue-500' ?>" href="<?php echo site_url('/reactjs') ?>">React</a>
 				</li>
 				<li class="mr-3">
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'campus') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('campus'); ?>">Campuses</a>

@@ -6,9 +6,6 @@ import { validEmail, validPassword, emailAvailable, registerEmail } from './help
 class RxJS {
 	constructor() {
 		console.log('%cRxjs...', 'color:red;font-size:18px');
-
-		console.log(`%cIndex01`, 'color:blue; font-size:18px');
-
 		this.events();
 	}
 
