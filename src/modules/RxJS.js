@@ -43,10 +43,11 @@ class RxJS {
 				filter((x) => x), // if it is not a valid email no need to run ajax check
 				switchMap(() => ajax(emailAvailable(formData.email))),
 				tap((data) => {
-					console.log(data.response);
-					let result = data.response;
-					console.log('EMAIL AVAILABLE', result.available);
-					if (result.available) {
+					let result = data.status;
+					console.log(result); // change to result. if express
+
+					console.log('EMAIL AVAILABLE', result);
+					if (result) {
 						formData.emailAvailable = true;
 						validationEmail.innerHTML += `<span class="email-avail"> ${formData.email} available</span>`;
 					} else {

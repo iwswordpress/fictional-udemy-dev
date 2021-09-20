@@ -23,7 +23,8 @@ export function emailAvailable(regEmail) {
 		email: regEmail,
 	};
 	return {
-		url: 'http://localhost:3000/email-available',
+		// url: 'http://localhost:3000/email-available',
+		url: 'https://wp-html.co.uk/api/wp-json/api/v1/email-available',
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',

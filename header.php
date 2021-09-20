@@ -4,6 +4,24 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+		<style>
+			html {
+					/* https://aykevl.nl/2014/09/fix-jumping-scrollbar */
+					margin-left: calc(100vw - 100%);
+				}
+
+				html {
+						margin-left: calc(100vw - 100%);
+						margin-right: 0;
+				}
+
+				@media screen and (min-width: 960px) {
+						html {
+								margin-left: calc(100vw - 100%);
+								margin-right: 0;
+						}
+				}
+		</style>
   </head>
  <body  <?php body_class(); ?> style="font-family: 'Raleway', sans-serif;	font-size: 22px;
 	line-height: 1.4;	font-family: 'Raleway', sans-serif;">
