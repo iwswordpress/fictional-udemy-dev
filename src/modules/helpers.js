@@ -23,7 +23,6 @@ export function emailAvailable(regEmail) {
 		email: regEmail,
 	};
 	return {
-		// url: 'http://localhost:3000/email-available',
 		url: 'http://localhost/finaluniv/wp-json/api/v1/email-available',
 		method: 'POST',
 		headers: {
