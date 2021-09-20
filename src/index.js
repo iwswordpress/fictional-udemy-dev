@@ -15,4 +15,6 @@ const myNotes = new MyNotes();
 const job = new Job();
 const rxjs = new RxJS();
 
-render(<Votes />, document.getElementById(`react-app`));
+if (document.getElementById('react-app')) {
+	render(<Votes />, document.getElementById('react-app'));
+}
