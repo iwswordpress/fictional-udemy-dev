@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 		<style>
-			/* html {
+			html {
 					/* https://aykevl.nl/2014/09/fix-jumping-scrollbar */
 					margin-left: calc(100vw - 100%);
-				} */
+				}
 
-				html {
+				/* html {
 						margin-left: calc(100vw - 100%);
 						margin-right: 0;
-				}
+				} */
 
 				@media screen and (min-width: 960px) {
 						html {
@@ -21,12 +21,13 @@
 								margin-right: 0;
 						}
 				}
+			
 		</style>
   </head>
  <body  <?php body_class(); ?> style="font-family: 'Raleway', sans-serif;	font-size: 22px;
-	line-height: 1.4;	font-family: 'Raleway', sans-serif;">
+	line-height: 1.4;	font-family: 'Raleway', sans-serif; margin-left:-20px;">
  
-	<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-2 fixed w-full z-10 top-0 mb-12  <?php if (is_admin_bar_showing()) echo 'mt-8' ?>">
+	<nav class="flex items-center justify-around flex-wrap bg-gray-800 p-2 fixed w-full z-10 top-0 mb-12  <?php if (is_admin_bar_showing()) echo 'mt-8' ?>" style="width:102%;">
 		<div class="flex items-center flex-shrink-0 text-white mr-6">
 			<a class="text-white no-underline hover:text-white hover:no-underline" href="#">
 				<span class="text-2xl pl-2"><i class="em em-grinning"></i> FINAL UNIV</span>
@@ -82,7 +83,7 @@
 						<a class="inline-block py-2 px-4 text-white no-underline <?php if (is_page('my-notes')) echo 'text-blue-500' ?>" href="<?php echo esc_url(site_url('/my-notes')); ?>">My Notes</a>
 						</li>
 						<li class="mr-3">
-							<a class="inline-block text-yellow-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="<?php echo wp_logout_url( get_permalink() ); ?>">LOG OUT</a>
+							<a class="inline-block text-yellow-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4 mr-8" href="<?php echo wp_logout_url( get_permalink() ); ?>">LOG OUT</a>
 						</li> 
 					<?php
         }
