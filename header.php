@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 		<style>
-			html {
+			/* html {
 					/* https://aykevl.nl/2014/09/fix-jumping-scrollbar */
 					margin-left: calc(100vw - 100%);
-				}
+				} */
 
 				html {
 						margin-left: calc(100vw - 100%);
