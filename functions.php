@@ -1,17 +1,32 @@
 <?php
 
 
-// Load in React via wp-element
-// add_action( 'wp_enqueue_scripts', 'my_enqueue_theme_js' );
-// function my_enqueue_theme_js() {
-//   wp_enqueue_script(
-//     'my-theme-frontend',
-//     get_stylesheet_directory_uri() . '/build/index.js',
-//     ['wp-element'],
-//     null, // Change this to null for production
-//     true
-//   );
-// }
+
+add_action('init', 'handle_preflight');
+function handle_preflight() {
+   header_remove("X-Powered-By");
+    $origin = get_http_origin();
+    if ($origin === 'http://localhost/') {
+        header("Access-Control-Allow-Origin: http://localhost" );
+        header("Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE");
+        header("Access-Control-Allow-Credentials: true");
+        header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization');
+        if ('OPTIONS' == $_SERVER['REQUEST_METHOD']) {
+            status_header(200);
+            exit();
+        }
+    }
+}
+
+add_filter('rest_authentication_errors', 'rest_filter_incoming_connections');
+function rest_filter_incoming_connections($errors) {
+    $request_server = $_SERVER['REMOTE_ADDR'];
+    $origin = get_http_origin();
+    if ($origin !== 'http://localhost') return new WP_Error('forbidden_access', $origin, array(
+        'status' => 403
+    ));
+    return $errors;
+}
 
 require get_theme_file_path('/inc/like-route.php');
 // require get_theme_file_path('/inc/search-route.php');

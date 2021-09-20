@@ -68,7 +68,7 @@
         </div>
       </div>
     </div>
-
+	<div><?php echo get_site_url() ?></div>
    
   </div>
   <?php get_footer();

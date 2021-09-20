@@ -3,6 +3,7 @@
   <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <?php wp_head(); ?>
 		<style>
 			html {
@@ -92,6 +93,7 @@
 			</ul>
 		</div>
 	</nav>
+
 <div class="mb-12" style="height:80px"></div>
 	<script>
 		//Javascript to toggle the menu
