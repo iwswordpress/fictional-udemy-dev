@@ -41,18 +41,16 @@
 				<li class="mr-3">
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'job') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('job') ?>">Jobs</a>
 				</li>
+			
+			
 				<li class="mr-3">
-					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'professor') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('professor'); ?>">Professors</a>
+					<a class="inline-block py-2 px-4 text-white no-underline <?php if  (is_page('rxjs'))  echo 'text-blue-500' ?>" href="<?php echo site_url('/rxjs') ?>">Rxjs</a>
 				</li>
 				<li class="mr-3">
 					<a class="inline-block py-2 px-4 text-white no-underline <?php if (get_post_type() == 'campus') echo 'text-blue-500' ?>" href="<?php echo get_post_type_archive_link('campus'); ?>">Campuses</a>
 				</li>
-				 
-				
-				
 			
-		
-			
+	
         <?php if (!is_user_logged_in()) { ?>
           <li class="mr-3">
             <a class="inline-block text-yellow-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4" href="<?php echo esc_url(site_url('/wp-login.php')); ?>">LOG IN</a>

@@ -4,7 +4,7 @@
           <div>
             <div>
               <h1>Index05 REGISTER</h1>
-              <h4>Needs express running</h4>
+              <h4 class="text-red-500">Needs express running</h4>
               <p>Had to comment out email-available as not working.</p>
             </div>
           </div>

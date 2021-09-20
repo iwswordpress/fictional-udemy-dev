@@ -14,6 +14,7 @@ class RxJS {
 
 	events() {
 		if (document.querySelector('#rxjs')) {
+			// check in site - can be id or class
 			// Store form data
 			const formData = {
 				email: '',
