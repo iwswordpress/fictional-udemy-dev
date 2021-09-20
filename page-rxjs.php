@@ -4,8 +4,8 @@
           <div>
             <div>
               <h1>Index05 REGISTER</h1>
-              <h4 class="text-red-500">Needs express running</h4>
-              <p>Had to comment out email-available as not working.</p>
+              <h4 class="font-bold text-red-500">Needs ndc-rxjs/express running</h4>
+             
             </div>
           </div>
 
