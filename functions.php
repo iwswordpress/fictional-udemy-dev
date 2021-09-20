@@ -2,16 +2,16 @@
 
 
 // Load in React via wp-element
-add_action( 'wp_enqueue_scripts', 'my_enqueue_theme_js' );
-function my_enqueue_theme_js() {
-  wp_enqueue_script(
-    'my-theme-frontend',
-    get_stylesheet_directory_uri() . '/build/index.js',
-    ['wp-element'],
-    null, // Change this to null for production
-    true
-  );
-}
+// add_action( 'wp_enqueue_scripts', 'my_enqueue_theme_js' );
+// function my_enqueue_theme_js() {
+//   wp_enqueue_script(
+//     'my-theme-frontend',
+//     get_stylesheet_directory_uri() . '/build/index.js',
+//     ['wp-element'],
+//     null, // Change this to null for production
+//     true
+//   );
+// }
 
 require get_theme_file_path('/inc/like-route.php');
 // require get_theme_file_path('/inc/search-route.php');
@@ -36,7 +36,7 @@ function pageBanner($args = NULL) {
  }
 
 function university_files() {
-  wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
+  wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery','wp-element'), '1.0', true);
   wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
   // wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/style-index.css'));
   // wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));

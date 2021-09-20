@@ -16,5 +16,6 @@ const job = new Job();
 const rxjs = new RxJS();
 
 if (document.getElementById('react-app')) {
+	console.log('%cReactDOM firing...', 'color:blue;font-size:18px');
 	render(<Votes />, document.getElementById('react-app'));
 }
